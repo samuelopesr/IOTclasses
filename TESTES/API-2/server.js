@@ -47,8 +47,10 @@ app.put("/client/:id", function(req, res){
     if(!client) return res.status(204).json("burro, burro")
 
     const { name } = req.body
+    const { email } = req.body
 
     client.name = name
+    client.email = email
 
     res.json(client)
 })
