@@ -1,11 +1,9 @@
-// import { log } from "console"
-// import { text } from "stream/consumers"
 
-import { log } from "console";
-import { text } from "stream/consumers";
 
 // const myArray: Array<string> = [ "samu", "nir", "zé" ]
 // console.log(myArray)
+
+import { callback } from "chart.js/dist/helpers/helpers.core";
 
 // let value: number = 10
 // let texto: string = "NICE"
@@ -83,17 +81,59 @@ arr.forEach((el, pos) => {
     console.log(el, pos);
 })
 
-
 const newList = arr.map((valor, pos) => {
-    return `Novo valor ${valor + pos} \n`
+    return valor + pos
 })
 
 console.log(newList);
 
 const withFilter = arr.filter((valor, pos) => {
-    return valor < 40
+    return pos !== 2
 })
 
 console.log(withFilter);
 
+const withReduce = arr.reduce((pv, cv, pos) => {
+    return pos
+})
 
+console.log("with reduce ",withReduce);
+
+
+const posts: Array<{id: number, title: string, category: string, likes: number}> = [
+    {
+        id: 1,
+        title: "Clean TS",
+        category: "Typescript",
+        likes: 300
+    },
+    {
+        id: 2,
+        title: "Stateless React",
+        category: "React",
+        likes: 12
+    },
+    {
+        id: 3,
+        title: "Functional Core",
+        category: "Typescript",
+        likes: 65
+    }
+]
+
+const worstPost = posts.reduce((worstPost, post) => {
+    return worstPost.likes < post.likes ? worstPost : post
+})
+
+console.log(worstPost.title, "likes is: ", worstPost.likes);
+
+const bestPost = posts.reduce((bestPost, post) => {
+    return bestPost.likes > post.likes ? bestPost : post
+} )
+
+console.log(bestPost.title, "likes is: ", bestPost.likes);
+
+
+const uniqueCat = posts.map(post => post.category).reduce((cat, c)=> cat.includes(c) ? cat : [...cat, c], new Array<string>())
+
+console.log(uniqueCat);
