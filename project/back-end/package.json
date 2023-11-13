@@ -4,15 +4,21 @@
   "description": "new project",
   "main": "index.js",
   "scripts": {
-    "dev":"ts-node-dev --respawn --transpile-only source/main.ts",
+    "dev": "ts-node-dev --respawn --transpile-only source/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^20.8.10",
+    "cors": "^2.8.5",
+    "expres": "^0.0.5",
+    "express": "^4.18.2",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
   }
 }

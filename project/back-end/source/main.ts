@@ -173,9 +173,14 @@ const reduced = filtered.reduce((acc, item, index, arr) => { return  acc + item}
 
 const reducedProducts = produtos.reduce((previous, current ) => {return previous + current.valor}, 0)
 
+const moreCheap = produtos.reduce((cheap, product) => {
+  return cheap.valor < product.valor ? cheap : product
+})
+
 console.log(duplied);
 console.log(filtered);
 console.log(reduced);
 console.log(reducedProducts);
+console.log(moreCheap);
 
 

@@ -35,7 +35,6 @@ app.post("/client", function(req, res){
     const { nome, email } = req.body
 
     //save
-
     res.json({ nome, email })
 })
 
