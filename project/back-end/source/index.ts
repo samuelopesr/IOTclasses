@@ -13,5 +13,9 @@ app.use(express.urlencoded({ extended: true }))
         res.json('wellCome')
     })
 
+app.use((req, res) => {
+    
+})
+
  app.listen(PORT, () => { console.log(`server running: ${HOSTNAME} in ${PORT}`);
  })
