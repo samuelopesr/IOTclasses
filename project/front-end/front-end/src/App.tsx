@@ -4,7 +4,8 @@ import  './api/api'
 import { getRotaPadrao } from './api/api';
 function App() {
 
-  
+  const [count, setCount] = useState(0)
+
   const [data,setData] = useState<any>();
 
   useEffect(()=>{
@@ -16,6 +17,7 @@ function App() {
     });
   },[]);
   
+  console.log(data);
   
   return (
     <>
@@ -25,6 +27,17 @@ function App() {
         </h1>
         <p>Esse é o status da minha aplicação</p>
       </div>
+      <button className='but'>
+        Its my button
+      </button>
+      <button onClick={() => {
+        setCount(count + 1)
+        console.log(count);
+        
+      }} >
+        {count}
+      </button>
+      
     </>
   )
 }

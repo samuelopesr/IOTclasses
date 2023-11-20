@@ -1,0 +1,13 @@
+.but:hover{
+    background-color: red;
+    width: 300px;
+}
+
+.but:active{
+    background-color: blue;
+}
+
+.but{
+    width: 200px;
+    transition: all, 1s;
+}
