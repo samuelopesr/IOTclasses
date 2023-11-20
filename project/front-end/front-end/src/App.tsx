@@ -6,7 +6,9 @@ function App() {
 
   const [count, setCount] = useState(0)
 
-  const [data,setData] = useState<any>();
+  const [data,setData] = useState({
+    status: ''
+  });
 
   useEffect(()=>{
 
@@ -17,7 +19,8 @@ function App() {
     });
   },[]);
   
-  console.log(data);
+// console.log(data.status);
+
   
   return (
     <>
