@@ -17,8 +17,9 @@ function App() {
   return (
     <>
       <div>
-        My todoList
+        <h1>
         {data}
+        </h1>
       </div>
     </>
   )
