@@ -11,7 +11,7 @@ app.use(cors())
  const PORT = process.env.PORT || 3001
 
  app.get('/status', (req, res)=>{
-        res.json('status: ativo')
+        res.json({status: 'ativo'})   
     })
 
  app.listen(PORT, () => { console.log(`server running: ${HOSTNAME} in ${PORT}`);

@@ -1,16 +1,18 @@
-import './App.css'
-import  './api/api'
+import "./App.css";
+import "./api/api";
+import  "./api/api";
+
+
 function App() {
+  
+
   return (
     <>
       <div>
-        My todoList
+      
       </div>
     </>
-  )
+  );
 }
 
-export default App
-
-
-
+export default App;
