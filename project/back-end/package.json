@@ -4,6 +4,7 @@
   "description": "new project",
   "main": "index.js",
   "scripts": {
+    "mig":"ts-node-dev --respawn --transpile-only source/novo.ts",
     "dev": "ts-node-dev --respawn --transpile-only source/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

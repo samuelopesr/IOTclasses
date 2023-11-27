@@ -17,10 +17,7 @@ function App() {
       setData(res);
 
     });
-  },[]);
-  
-// console.log(data.status);
-
+  },[])
   
   return (
     <>
