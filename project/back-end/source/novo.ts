@@ -33,3 +33,5 @@ function resto(a: number, b:number)
 }
 
 callback(10,10,resto)
+
+

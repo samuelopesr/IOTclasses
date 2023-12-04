@@ -11,8 +11,14 @@ const PORT = process.env.PORT || 3001;
 app.get("/status", (req, res) => {
   res.json({
     status: "ativo",
+    array: ['OPA', 'NICE', 'LEGAL']
   });
 });
+
+app.post('/', (req, res) => {
+  console.log(req);
+  
+})
 
 app.listen(PORT, () => {
   console.log(`server running: ${HOSTNAME} in ${PORT}`);
