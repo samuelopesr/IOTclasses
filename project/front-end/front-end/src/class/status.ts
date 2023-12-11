@@ -1,6 +1,7 @@
 export class Status {
-    status = ''
-    array = []
+   id: number = 0
+   nome: string = ''
+   idade: number = 0
 }
 
 export default Status

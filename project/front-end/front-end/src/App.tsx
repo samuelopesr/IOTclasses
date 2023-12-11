@@ -7,7 +7,7 @@ import Status from "./class/status";
 function App() {
   const [count, setCount] = useState(0);
   
-  const [data, setData] = useState(new Status);
+  const [data, setData] = useState(Array<Status>);
 
   const [post, postData] = useState()
 
@@ -21,8 +21,8 @@ function App() {
 
   return (
     <>
-      <h1>{data.status}</h1>
-      <h1>{data.array.map((res) => { return <h1>{res}</h1> })}</h1>
+      <h1>{data.map((res) => { return <ul> <li>{res.id} | {res.nome} | {res.idade}</li></ul>})}</h1>
+      
       <button className="but">Its my button</button>
       <button     
         onClick={() => {
