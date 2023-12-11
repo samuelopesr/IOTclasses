@@ -1,12 +1,14 @@
-import express from "express";
+import express, { Router } from "express";
 import cors from "cors";
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-const HOSTNAME = process.env.HOSTNAME || "http://localhost";
+const HOSTNAME =  "http://localhost";
 const PORT = process.env.PORT || 3001;
+
+const router = Router();
 
 app.get("/status", (req, res) => {
   res.json({
@@ -15,11 +17,14 @@ app.get("/status", (req, res) => {
   });
 });
 
-app.post('/', (req, res) => {
-  console.log(req);
+app.post('/teste', async (req, res) => {
+
+  console.log(req.body);
+  
+  res.send(`ok`)
   
 })
 
 app.listen(PORT, () => {
-  console.log(`server running: ${HOSTNAME} in ${PORT}`);
+  console.log(`server running: ${HOSTNAME}:${PORT}/status`);
 });
