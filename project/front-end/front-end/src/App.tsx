@@ -15,6 +15,8 @@ function App() {
     getRotaPadrao().then((res) => {
       setData(res);
     });
+
+    
   }, []);
 
   console.log(data);
@@ -26,14 +28,22 @@ function App() {
       <button className="but">Its my button</button>
       <button     
         onClick={() => {
-          postRota({ numero: count, texto: 'SLA'}).then((res: any)=> {
-            postData(res)
+          postRota({ numero: count, texto: 'SLA'}).then((res)=> {
+            postData(res.data)
+            console.log(post);
+            
           })
         }}
       >
-        {count}
+        click
       </button>
-
+      <button
+      onClick={() => {
+        setCount(count + 1);
+      }}
+      >
+        ADD
+      </button>
     </>
   );
 }
