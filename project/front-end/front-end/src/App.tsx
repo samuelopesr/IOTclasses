@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <h1>{data.status}</h1>
+      <h1>status --- {data.status}</h1>
       <button className="but">Its my button</button>
       <button
         onClick={() => {

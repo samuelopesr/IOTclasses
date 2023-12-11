@@ -184,3 +184,17 @@ console.log(reducedProducts);
 console.log(moreCheap);
 
 
+const outro = {
+  "userList":
+  [{
+    "name": "Bob",
+    "age": 28
+  },{
+    "name": "Tom",
+    "age": 45
+  },{
+    "name": "Alice",
+    "age": 32
+  }]
+}
+
